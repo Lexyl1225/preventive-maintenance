@@ -30,7 +30,6 @@ def download_json_from_url(url, local_filename=None):
         content_type = response.headers.get('Content-Type', '')
         if 'json' not in content_type.lower() and 'text' not in content_type.lower():
              print(f"Warning: Expected JSON, but received Content-Type: {content_type}")
-
         # 3. Save the content to the local file
         with open(local_filename, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
@@ -47,7 +46,7 @@ def download_json_from_url(url, local_filename=None):
 
 # --- Example Usage ---
 # REPLACE THIS WITH YOUR ACTUAL JSON URL
-json_url = "https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy9mYjFhNzcxYzI5NWQxYjBhL0lnQ2UtOFY2YS1EZFNvOWxJSzRUWlZUWUFjNHdTM0NuTVlyUk4waGpxbUhaNEpZP2U9NToxQVRTeDcmc2hhcmluZ3YyPXRydWUmZnJvbVNoYXJlPXRydWUmYXQ9OSZ3ZE9yaWdpbj1PV0EuTElOSyZ3ZFByZXZpb3VzU2Vzc2lvbj02ZjA4NmJlYi00NzE2LTQ5YWUtOWFkZi03NTRlYjY5YjcyMTg&id=FB1A771C295D1B0A%21s7ac5fb9ee06b4add8f6520ae136554d8&cid=FB1A771C295D1B0A"
+json_url = "JSON_URL"
 output_name = "pm_records_backup.json"
 
 download_json_from_url(json_url, output_name)
